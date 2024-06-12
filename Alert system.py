@@ -14,7 +14,7 @@ from airflow.operators.python import get_current_context
 sns.set()
 
 default_args = {
-    'owner': 'a.burlakov-9',
+    'owner': 'a.burlakov-11',
     'depends_on_past': False,
     'retries': 2,
     'retry_delay': timedelta(minutes=5),
@@ -45,10 +45,10 @@ def run_alerts_feed(chat=None):
     bot = telegram.Bot(token='6023168328:AAE1WuD5RUDLNDyOgGdJkPBmKsXXXXXXXXXXXXXX')
     
     connection = {
-        'host': 'https://clickhouse.lab.karpov.courses',
+        'host': 'https://clickhouse.XXXXXXXXXXXXXXX',
         'password': 'XXXXXXXXXXXXX',
-        'user': 'student',
-        'database': 'simulator_20230120'
+        'user': 'XXXXXXXXXX',
+        'database': 'XXXXXXXXXXXXX'
     }
 
     query = ''' SELECT
@@ -109,10 +109,10 @@ def run_alerts_message(chat=None):
     bot = telegram.Bot(token='6023168328:AAE1WuD5RUDLNDyOgGdJkPBmKXXXXXXXXXXXXXXXXXX')
    
     connection = {
-        'host': 'https://clickhouse.lab.karpov.courses',
+        'host': 'https://clickhouse.XXXXXXXXXXXXX',
         'password': 'XXXXXXXXXXXXX',
-        'user': 'student',
-        'database': 'simulator_20230120'
+        'user': 'XXXXXXXXXXXX',
+        'database': 'XXXXXXXXXXXX'
     }
 
     query = ''' SELECT
